@@ -10,7 +10,7 @@ export class ProductService{
 
     createProducts(products: {pname:string,pdesc:string,pprice:string}){
         const headers = new HttpHeaders({'myHeader':'Aishu'})
-        this.http.post<{name:string}>('https://angularbyaishu-default-rtdb.firebaseio.com/products.json123',products,{headers:headers}).subscribe((res)=>{
+        this.http.post<{name:string}>('https://angularbyaishu-default-rtdb.firebaseio.com/products.json',products,{headers:headers}).subscribe((res)=>{
           console.log(res)
         },(err)=>{
             this.error.next(err.message);

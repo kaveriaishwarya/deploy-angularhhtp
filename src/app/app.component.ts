@@ -22,9 +22,7 @@ export class AppComponent implements OnInit,OnDestroy {
   constructor(private http:HttpClient,private service:ProductService){}
   ngOnInit(){
     this.fetchProducts();
-    this.errorsub= this.service.error.subscribe((message)=>{
-      this.errorMessage=message;
-    })
+  
   }
 
   onProductFetch(){
